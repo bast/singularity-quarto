@@ -2,7 +2,7 @@
 
 How to fetch and use the image:
 ```
-$ singularity pull https://github.com/bast/singularity-quarto/releases/download/0.1.0/quarto.sif
+$ singularity pull https://github.com/bast/singularity-quarto/releases/download/0.2.0/quarto.sif
 
 $ ./quarto.sif --help
 $ ./quarto.sif preview document.md
