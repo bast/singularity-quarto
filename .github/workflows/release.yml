@@ -60,6 +60,7 @@ jobs:
                 fi
             done
       - name: Upload release assets
+        uses: geertvdc/setup-hub@master
         if: ${{ env.release_tag != env.latest_tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
