@@ -11,6 +11,8 @@ jobs:
     name: Create release
     runs-on: ubuntu-latest
     steps:
+      - name: Install hub
+        uses: sudo apt-get install -y hub
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Get latest tag
@@ -60,8 +62,6 @@ jobs:
                     echo "There was an issue building $container."
                 fi
             done
-      - name: Install hub
-        uses: geertvdc/setup-hub@master
       - name: Upload release assets
         if: ${{ env.release_tag != env.latest_tag }}
         env:
