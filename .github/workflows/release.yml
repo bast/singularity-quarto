@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install hub
-        uses: sudo apt-get install -y hub
+        run: sudo apt-get install -y hub
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Get latest tag
